@@ -1,0 +1,39 @@
+Source-Makefile: package/kernel/kmod-sched-cake-oot/Makefile
+
+Package: kmod-sched-cake-oot
+Submenu: Network Support
+Version: <LINUX_VERSION>+2020-07-24-48979385757f3408c3427b3ebbf5963efdada5aa-1
+Depends: @LINUX_4_14 +kmod-sched-core +kmod-ipt-conntrack
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: OOT Cake fq_codel/blue derived shaper
+Maintainer: Kevin Darbyshire-Bryant <ldir@darbyshire-bryant.me.uk>
+Source: sched-cake-oot-2020-07-24-48979385757f3408c3427b3ebbf5963efdada5aa.tar.xz
+Type: ipkg
+Description:   O(ut) O(f) T(ree) Common Applications Kept Enhanced fq_codel/blue derived shaper
+https://github.com/dtaht/sch_cake
+Kevin Darbyshire-Bryant <ldir@darbyshire-bryant.me.uk>
+@@
+
+Package: kmod-sched-cake-virtual
+Submenu: Network Support
+Version: <LINUX_VERSION>+2020-07-24-48979385757f3408c3427b3ebbf5963efdada5aa-1
+Depends: +!LINUX_4_14:kmod-sched-cake +LINUX_4_14:kmod-sched-cake-oot
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Virtual package for sched-cake
+Maintainer: Kevin Darbyshire-Bryant <ldir@darbyshire-bryant.me.uk>
+Source: sched-cake-oot-2020-07-24-48979385757f3408c3427b3ebbf5963efdada5aa.tar.xz
+Type: ipkg
+Description:   Virtual package for resolving sch_cake dependencies
+https://github.com/dtaht/sch_cake
+Kevin Darbyshire-Bryant <ldir@darbyshire-bryant.me.uk>
+@@
+
+

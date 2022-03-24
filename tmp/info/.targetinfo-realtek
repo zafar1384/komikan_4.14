@@ -1,0 +1,101 @@
+Source-Makefile: target/linux/realtek/Makefile
+Target: realtek
+Target-Board: realtek
+Target-Name: Realtek
+Target-Arch: mips
+Target-Arch-Packages: mips_mips32
+Target-Features: gpio squashfs
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+CPU-Type: mips32
+Linux-Version: 4.14.187
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for Realtek based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd urandom-seed urngd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd-ipv6only odhcp6c kmod-ipt-offload kmod-gpio-button-hotplug swconfig 
+Target: realtek/rtl8197d
+Target-Board: realtek
+Target-Name: RTL8197d based boards
+Target-Arch: mips
+Target-Arch-Packages: realtek_lx53
+Target-Features: dt gpio squashfs
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -march=lx5380
+CPU-Type: lx53
+Linux-Version: 4.14.187
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+        Build firmware images for Realtek RTL8197D based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd urandom-seed urngd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd-ipv6only odhcp6c kmod-ipt-offload kmod-gpio-button-hotplug swconfig 
+Target-Profile: Default
+Target-Profile-Name: Generic RTL8197D
+Target-Profile-Packages: -wpad-mini 
+Target-Profile-Description:
+        Realtek RTL8197D SOC
+@@
+
+Target: realtek/rtl8196e
+Target-Board: realtek
+Target-Name: RTL8196e based boards
+Target-Arch: mips
+Target-Arch-Packages: realtek_lx43
+Target-Features: dt gpio pci squashfs
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -march=lx4380
+CPU-Type: lx43
+Linux-Version: 4.14.187
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+        Build firmware images for Realtek RTL8196E based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd urandom-seed urngd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd-ipv6only odhcp6c kmod-ipt-offload kmod-gpio-button-hotplug swconfig 
+Target-Profile: Default
+Target-Profile-Name: Generic RTL8196E without WiFi
+Target-Profile-Packages: -wpad-mini 
+Target-Profile-Description:
+        Realtek RTL8196E SOC
+@@
+
+Target: realtek/rtl8197f
+Target-Board: realtek
+Target-Name: RTL8197f based boards
+Target-Arch: mipsel
+Target-Arch-Packages: mipsel_24kc
+Target-Features: dt gpio mips16 pci pcie squashfs
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+CPU-Type: 24kc
+Linux-Version: 4.14.187
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+        Build firmware images for Realtek RTL8197F based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd urandom-seed urngd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd-ipv6only odhcp6c kmod-ipt-offload kmod-gpio-button-hotplug swconfig 
+Target-Profile: Default
+Target-Profile-Name: Generic RTL8197F
+Target-Profile-Packages: -wpad-mini 
+Target-Profile-Description:
+        Realtek RTL8197F SOC
+@@
+
+Target-Profile: DEVICE_RE708
+Target-Profile-Name: Multilaser RE708 V1
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: re708v1 re708-v1
+
+
+Target-Profile-Description:
+Build firmware images for Multilaser RE708 V1
+
+
+
+@@
+
+

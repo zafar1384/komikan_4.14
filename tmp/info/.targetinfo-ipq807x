@@ -1,0 +1,25 @@
+Source-Makefile: target/linux/ipq807x/Makefile
+Target: ipq807x
+Target-Board: ipq807x
+Target-Name: Qualcomm Atheros IPQ807x
+Target-Arch: aarch64
+Target-Arch-Packages: aarch64_cortex-a53
+Target-Features: display dt gpio pci ramdisk rtc source-only squashfs usb virtio
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=cortex-a53
+CPU-Type: cortex-a53
+Linux-Version: 5.4.52
+Linux-Release: 1
+Linux-Kernel-Arch: arm64
+Target-Description:
+
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd urandom-seed urngd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd-ipv6only odhcp6c kmod-ipt-offload 
+Target-Profile: Default
+Target-Profile-Name: Default Profile (minimum package set)
+Target-Profile-Packages:  
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+

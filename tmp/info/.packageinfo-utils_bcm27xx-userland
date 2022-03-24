@@ -1,0 +1,20 @@
+Source-Makefile: package/utils/bcm27xx-userland/Makefile
+
+Package: bcm27xx-userland
+Default: y if TARGET_bcm27xx
+Version: f4bccc38f9d0a740aeb7818d33ca1fd551e325de-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_bcm27xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: BCM27xx userland tools
+Maintainer: Álvaro Fernández Rojas <noltari@gmail.com>
+Source: bcm27xx-userland-f4bccc38f9d0a740aeb7818d33ca1fd551e325de.tar.gz
+Type: ipkg
+Description:   BCM27xx userland tools including vcgencmd and tvservice.
+Álvaro Fernández Rojas <noltari@gmail.com>
+@@
+
+

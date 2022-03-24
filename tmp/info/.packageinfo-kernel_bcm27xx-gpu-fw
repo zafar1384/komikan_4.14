@@ -1,0 +1,20 @@
+Source-Makefile: package/kernel/bcm27xx-gpu-fw/Makefile
+
+Package: bcm27xx-gpu-fw
+Default: y if TARGET_bcm27xx
+Version: 2020-04-15-9e3c23ce779e8cf44c33d6a25bba249319207f68
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_bcm27xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: boot
+Category: Boot Loaders
+Title: bcm27xx-gpu-fw
+Maintainer: 
+Source: 
+Type: ipkg
+Description:  GPU and kernel boot firmware for bcm27xx.
+
+@@
+
+

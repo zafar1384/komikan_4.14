@@ -1,0 +1,21 @@
+Source-Makefile: package/network/utils/ltq-dsl-base/Makefile
+
+Package: ltq-dsl-base
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_lantiq +jshn
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DSL related files for Intel/Lantiq DSL Chipsets
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   This package contains DSL related files for Intel/Lantiq DSL Chipsets.
+http://openwrt.org/
+
+@@
+
+

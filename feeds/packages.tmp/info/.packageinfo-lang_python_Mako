@@ -1,0 +1,52 @@
+Source-Makefile: feeds/packages/lang/python/Mako/Makefile
+Build-Depends/host: python3/host
+Build-Types: host
+
+Package: python3-mako
+Submenu: Python
+Version: 1.1.5-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +python3-light
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Mako
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: Mako-1.1.5.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE.rst
+Type: ipkg
+Description:  Mako is a template library written in Python.
+https://www.makotemplates.org/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+Package: python3-mako-src
+Submenu: Python
+Version: 1.1.5-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Mako (sources)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: Mako-1.1.5.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE.rst
+Type: ipkg
+Description:      Mako is a template library written in Python.
+
+    This package contains the Python source files for python3-mako.
+https://www.makotemplates.org/
+Daniel Golle <daniel@makrotopia.org>
+@@
+Config:
+    depends on PACKAGE_python3-mako
+@@
+
+

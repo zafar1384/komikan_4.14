@@ -1,0 +1,20 @@
+Source-Makefile: package/boot/arm-trusted-firmware-mvebu/Makefile
+
+Package: arm-trusted-firmware-mvebu/uDPU
+Version: 2.2-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +u-boot-uDPU
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: boot
+Category: Boot Loaders
+Repository: base
+Title: ARM Trusted Firmware for Methode uDPU
+Maintainer: Vladimir Vid <vladimir.vid@sartura.hr>
+Source: arm-trusted-firmware-mvebu-2.tar.xz
+Type: ipkg
+Description: ARM Trusted Firmware for Methode uDPU
+Vladimir Vid <vladimir.vid@sartura.hr>
+@@
+
+

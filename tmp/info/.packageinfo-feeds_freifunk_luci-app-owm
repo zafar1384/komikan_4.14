@@ -1,0 +1,79 @@
+Source-Makefile: package/feeds/freifunk/luci-app-owm/Makefile
+
+Package: luci-app-owm
+Submenu: 3. Applications
+Version: 0.5.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +luci-lib-json +olsrd-mod-jsoninfo +luci-lib-ip +libuci-lua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: freifunk
+Title: Luci JSON Export for Open Wireless Map
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Luci JSON Export for Open Wireless Map
+https://github.com/freifunk/openwrt-packages
+
+@@
+
+Package: luci-app-owm-cmd
+Submenu: 3. Applications
+Version: 0.5.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-owm +luci-lib-httpclient +libuci-lua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: freifunk
+Title: luci-app-owm-cmd - Commandline update tool
+Maintainer: 
+Source: 
+Type: ipkg
+Description: luci-app-owm-cmd - Commandline update tool
+https://github.com/freifunk/openwrt-packages
+
+@@
+
+Package: luci-app-owm-gui
+Submenu: 3. Applications
+Version: 0.5.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-owm +luci-base
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: freifunk
+Title: luci-app-owm-gui - GUI Open Wireless Map
+Maintainer: 
+Source: 
+Type: ipkg
+Description: luci-app-owm-gui - GUI Open Wireless Map
+https://github.com/freifunk/openwrt-packages
+
+@@
+
+Package: luci-app-owm-ant
+Submenu: 3. Applications
+Version: 0.5.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-owm +luci-base
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: freifunk
+Title: luci-app-owm-ant - GUI Antenna settings
+Maintainer: 
+Source: 
+Type: ipkg
+Description: luci-app-owm-ant - GUI Antenna settings
+https://github.com/freifunk/openwrt-packages
+
+@@
+
+

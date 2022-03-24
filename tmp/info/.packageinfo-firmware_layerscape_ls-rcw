@@ -1,0 +1,20 @@
+Source-Makefile: package/firmware/layerscape/ls-rcw/Makefile
+
+Package: layerscape-rcw
+Version: LSDK-20.04-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_layerscape
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: NXP Layerscape RCW binaries
+Maintainer: 
+Source: ls-rcw-LSDK-20.04.tar.xz
+Type: ipkg
+Description: NXP Layerscape RCW binaries
+
+@@
+
+

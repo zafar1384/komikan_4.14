@@ -1,0 +1,63 @@
+Source-Makefile: target/linux/rockchip/Makefile
+Target: rockchip
+Target-Board: rockchip
+Target-Name: Rockchip
+Target-Arch: 
+Target-Arch-Packages: 
+Target-Features: audio boot-part display dt ext4 fpu gpio rootfs-part squashfs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: 
+Linux-Version: 5.4.52
+Linux-Release: 1
+Linux-Kernel-Arch: arm64
+Target-Description:
+	Build firmware image for Rockchip SoC devices.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd urandom-seed urngd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd-ipv6only odhcp6c kmod-ipt-offload uboot-envtools partx-utils e2fsprogs mkf2fs kmod-gpio-button-hotplug 
+Target: rockchip/armv8
+Target-Board: rockchip
+Target-Name: RK33xx boards (64 bit)
+Target-Arch: aarch64
+Target-Arch-Packages: aarch64_generic
+Target-Features: audio boot-part display dt ext4 fpu gpio pci pcie rootfs-part rtc squashfs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=generic
+CPU-Type: generic
+Linux-Version: 5.4.52
+Linux-Release: 1
+Linux-Kernel-Arch: arm64
+Target-Description:
+	Build firmware image for Rockchip RK33xx devices.
+	This firmware features a 64 bit kernel.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd urandom-seed urngd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd-ipv6only odhcp6c kmod-ipt-offload uboot-envtools partx-utils e2fsprogs mkf2fs kmod-gpio-button-hotplug 
+Target-Profile: DEVICE_friendlyarm_nanopi-r2s
+Target-Profile-Name: FriendlyARM NanoPi R2S
+Target-Profile-Packages: kmod-usb-net kmod-usb-net-rtl8152 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: friendlyarm,nanopi-r2s
+
+
+Target-Profile-Description:
+Build firmware images for FriendlyARM NanoPi R2S
+
+
+
+@@
+
+Target-Profile: DEVICE_pine64_rockpro64
+Target-Profile-Name: Pine64 RockPro64
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: pine64,rockpro64
+
+
+Target-Profile-Description:
+Build firmware images for Pine64 RockPro64
+
+
+
+@@
+
+
